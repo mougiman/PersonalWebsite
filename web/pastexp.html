@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Alex Mougios - Past Experience</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="WEB-INF/styles.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body onload="startTime()">
+        <script>
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML =
+                        h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i
+                }
+                ;  // add zero in front of numbers < 10
+                return i;
+            }
+
+        </script>
+
+        <!-- navbar -->
+        <div id="navbar" class="nav-colored">
+            <div style="width:60%; margin: auto;">
+                <div class="inline">
+                    <a class="navA" href="index.html" >Alex Mougios</a>
+                    <a class="navA" href="projects.html">Projects</a>
+                    <a class="navA" href="pastexp.html" >Past Experience</a> 
+                </div>
+                <div id="txt" class="clock"></div>
+            </div>
+        </div>
+
+        <div class="second">
+            <div class="third">
+                <h1 class="alt-h2">Education & Qualifications</h1>
+                <h3>University of Technology Sydney</h3>
+                <h3>(2017 ~ 2020)</h3>
+                <p>Bachelor of Science in Information Technology (Major in Enterprise Systems Development)</p>
+                <h3>St Benedict's Catholic College</h3>
+                <h3>(2011 ~ 2016)</h3>
+                <p>Atar: 79.95</p>
+                <h3>Police Check</h3>
+                <p>National Criminal History Check (Issued: 13/11/2017)</p>
+                <h3>Full NSW Drivers License</h3>
+                <p>(Expires 03/01/2024)</p>
+                
+            </div>
+        </div>
+
+        <div class="fourth">
+            <div class="fifth">
+                <h1 class="alt-h2">Past Experience</h1>
+                <h3>Office of Sporting - Casual Staff</h3>
+                <h3>(10/2019-Present)</h3>
+                <p>My role as a Customer and Events Assistant involves many tasks from communicating with Event organiser, to odd jobs</p>
+                <h3>With-You - Casual Staff </h3>
+                <h3>(06/2017-05/2019)</h3>
+                <p>Includes transporting young people, writing case notes on the young people's travel and tutoring students in English and Math in years 5 - 12. Also include performing various ‘general tasks’ such as picking up a young person's medication or IT help.</p>
+                <h3>Narellan Court Chinese Restaurant - Part-time Staff</h3>
+                <h3>(02/2017-06/2017)</h3>
+                <p>I worked both Friday and Saturday nights, completing a variety of tasks that included taking orders and serving customers, cleaning duties, managing takeaway, preparing some simple dishes, and working the bar.  </p>
+                <h3>Westview Restaurant - Casual Staff</h3>
+                <h3>(02/2015-11/2015)</h3>
+                <p>Working on a weekend roster in a variety of tasks. Serving tables from 1 to functions of 150. Setting & clearing of tables and providing excellent customer service to customers. Kitchen assistant, washing all kitchen and restaurant wares along with assisting in smaller item preparation. Taking front of house takeaway orders and working a computerized cash register.</p>               
+            
+            </div>
+        </div>
+
+        <div class="second">
+            <div class='third'>
+                <h1 class="alt-h2">Units Studied at UTS</h1>
+                <table>
+                    <tr>
+                        <th>Year 1<br />Semester 1</th>
+                        <th>Communication for IT Professionals</th>
+                        <th>Introduction to Information Systems</th>
+                        <th>Programming Fundamentals</th>
+                        <th>Web Systems</th>
+                    </tr>
+                    <tr>
+                        <th>Year 1<br />Semester 2</th>
+                        <th>Business Requirements Modelling</th>
+                        <th>Network Essentials</th>
+                        <th>Security Fundamentals</th>
+                        <th>Web Services Development</th>
+                    </tr>
+                    <tr>
+                        <th>Year 2<br />Semester 1</th>
+                        <th>Applications Programming</th>
+                        <th>Cyber Security</th>
+                        <th>Database Fundamentals</th>
+                        <th>Routing and Internetworks</th>
+                    </tr>
+                    <tr>
+                        <th>Year 2<br />Semester 2</th>
+                        <th>Career Management for IT Professionals</th>
+                        <th>Data Structures and Algorithms</th>
+                        <th>Fundamentals of Interaction Design</th>
+                        <th>Introduction to Software Development</th>
+                    </tr>
+                    <tr>
+                        <th>Year 3<br />Semester 1</th>
+                        <th>Advanced Software Development</th>
+                        <th>Mobile Networking</th>
+                        <th>Project Management and the Professional</th>
+                        <th>Software Architecture</th>
+                    </tr>
+                    <tr>
+                        <th>Year 3<br />Semester 2</th>
+                        <th>Application Development in the iOS Environment</th>
+                        <th>Cloud Computing and Software as a Service</th>
+                        <th>Network Management</th>
+                        <th>Programming on the Internet</th>
+                    </tr>
+                </table>
+            </div>
+        </div> 
+
+        <!-- The social media icon bar -->
+        <div class="icon-bar">
+            <a href="https://www.instagram.com/mougiman1/?hl=en" class="instagram"><i class="fa fa-instagram"></i></a> 
+            <a href="https://twitter.com/AlexMougios" class="twitter"><i class="fa fa-twitter"></i></a> 
+            <a href="https://github.com/mougiman" class="github"><i class="fa fa-github"></i></a> 
+            <a href="https://www.linkedin.com/in/alex-mougios-5143a913a/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCebr2VTRPcE_hYr-Ewy097g?view_as=subscriber" class="youtube"><i class="fa fa-youtube"></i></a> 
+        </div>
+    </body>
+</html>

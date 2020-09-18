@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            .square {
+                height: 50px;
+                width: 50px;
+                display:inline-block;
+                margin: 0;
+                vertical-align: top;
+            }
+            .plain{
+                background-color: lawngreen;
+            }
+            .forest{
+                background-color: forestgreen;
+            }
+            .water{
+                background-color: dodgerblue;
+            }
+            .sand{
+                background-color: sandybrown;
+            }
+        </style>
+        <script>
+            var x = 10;
+            var y = 10;
+            var i;
+            var mapData;
+
+            function buildMap() {
+                mapData = "";
+                x = document.getElementById("height").value;
+                y = document.getElementById("width").value;
+                for (i = 0; i < x * y; i++) {
+                    if (i % y === 0) {
+                        mapData += "<div></div>";
+                    }
+                    mapData += "<div class=\"square " + getLand() + "\"></div>";
+
+                }
+                document.getElementById("map").innerHTML = mapData;
+            }
+
+            function getLand() {
+                var num = Math.floor(Math.random() * 100);
+                if (num >= 0 && num <= 50) {
+                    return "plain";
+                } else if (num >= 51 && num <= 65) {
+                    return "forest";
+                } else if (num >= 66 && num <= 90) {
+                    return "water";
+                } else if (num >= 91 && num <= 100) {
+                    return "sand";
+                }
+            }
+
+        </script>
+        <div>
+            <h1>Map Generator</h1> 
+            <p>Height: </p><input type="number" id="height" value="10">
+            <p>Width: </p><input type="number" id="width" value="10">
+            <button onclick="buildMap()">Generate Map</button>
+        </div>
+        <div id="map"></div>
+    </body>
+</html>

@@ -1,0 +1,329 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/01/2019, 4:05:19 PM
+    Author     : Mougi
+
+
+282828 - grey
+e3e7d3 - pale sand
+fdfff7 - snow
+bdc2bf - light grey
+f4f4f4 - pale white
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+body {
+    background-color: #282828;
+    margin: 0;
+}
+
+.navA{
+    font-size: 24px;
+    color: #fdfff7;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.landing{
+    background-color: #202020;
+    background-image: url(../images/QoTA5FK.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    filter: blur(2px);
+    height: 100vh;
+    z-index: -1;
+}
+
+.landingText{
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+/*l = landing*/
+.lh1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    margin: 0.1em;
+}
+
+.lh3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+}
+
+.lh5{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em; 
+    margin: 0.6em;
+}
+
+.lh2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em; 
+    margin: 0.5em;
+
+}
+
+.lp{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em; 
+}
+
+.uts{
+
+}
+
+.skillBox{
+    color: white;
+    display: inline-block;
+    font-size: 1em; 
+    max-width: 24%;
+    vertical-align: top;
+}
+
+.right{
+    padding-right: 5px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.first{
+    padding: 15px;
+    margin: auto; 
+    width: 60%;
+    position: fixed;
+    transform: translateX(30%);
+}
+
+.nav-colored { 
+    padding: 15px;
+    margin: auto; 
+    width: 100%;
+    position: fixed;
+    background-color:#282828; 
+    z-index: 1;
+}
+
+.nav-transparent { 
+    padding: 15px;
+    margin: auto; 
+    width: 100%;
+    position: fixed;
+    background-color:transparent;
+    z-index: 1;}
+
+
+.second{
+    padding-top: 10px;
+    padding-bottom: 80px;
+    background-color: #202020;
+    z-index: 0;
+}
+
+.third{
+    width: 60%;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+}
+
+.fourth{
+    padding: 15px;
+    background-color: #fdfff7;
+}
+
+.fifth{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.buffer{
+    margin-top: 80px;
+}
+
+.sixth{
+    margin-top: 110px;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    color: white
+}
+
+.seventh{
+    padding: 15px;
+    background-color: #fdfff7;
+    height: 300px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+
+
+.alt-a:hover{
+    color: #fdfff7;
+    background-color: #282828;
+}
+
+.alt-a:active{
+    color: gray;
+    background-color: #282828;
+}
+
+
+div{
+    padding: 0px;
+}
+
+.navA:hover{
+    background-color: #fdfff7;
+    color: #202020;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    transition: all 0.3s ease;
+
+}
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+    background-color: #282828;
+    border-radius: 4px;
+    border: none;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+    color: #202020;
+    background-color: #fdfff7;
+}
+
+.facebook {
+    color: white;
+}
+
+.twitter {
+    color: white;
+}
+
+.google {
+    color: white;
+}
+
+.linkedin {
+    color: white;
+}
+
+.youtube {
+    color: white;
+}
+
+.app1{
+    background-color: #fdfff7;
+    display: block;
+    text-align: left;
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 6px;
+    width: 45%
+}
+
+img{
+
+}
+
+.uts{
+    display: inline-block;
+    height: 15em;
+    float: left;
+    margin-right: 1px;
+}
+
+.cyptoImgs{
+    display: inline-block;
+    height: 30em;
+    float: right;
+    margin-right: 1px;
+    border: 1px;;
+    border-color: black;
+    border-style: solid;
+}
+
+tr{
+    margin-bottom: 30px;   
+}
+
+.clock{
+    font-family: arial;
+    font-size: 20px;
+    color: #fdfff7;
+    display: inline-block;
+    float: right;
+    text-align: center;
+}
+
+.inline{
+    display: inline-block;
+    width: auto;
+}
+
+.speechmarks{
+    font-size: 1.5em;
+}
+
+/* Style buttons */
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+

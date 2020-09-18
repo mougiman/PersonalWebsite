@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+                    "use strict";
+                    if (document.body.scrollTop >= 200) {
+                        myNav.classList.add("nav-colored");
+                        myNav.classList.remove("nav-transparent");
+                    } else {
+                        myNav.classList.add("nav-transparent");
+                        myNav.classList.remove("nav-colored");
+                    }
+                    
+-->
+<html>
+    <head>
+        <title>Alex Mougios - Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="WEB-INF/styles.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+        <style>
+        </style>
+        <script>
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML =
+                        h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i
+                }
+                ;  // add zero in front of numbers < 10
+                return i;
+            }
+
+            function scrollTest() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("navbar").className = "nav-colored";
+                } else {
+                    document.getElementById("navbar").className = "nav-transparent";
+                }
+            }
+
+            window.onscroll = function () {
+                scrollTest()
+            };
+        </script>
+    </head>
+    <body onload="startTime()">
+        <!-- navbar -->
+        <div id="navbar" class="nav-transparent">
+            <div style="width:60%; margin: auto;">
+                <div class="inline">
+                    <a class="navA" href="index.html" >Alex Mougios</a>
+                    <a class="navA" href="projects.html">Projects</a>
+                    <a class="navA" href="pastexp.html" >Past Experience</a> 
+                </div>
+                <div id="txt" class="clock"></div>
+            </div>
+        </div>
+        <!-- landing div with image-->
+        <div class="landing">     
+            <!--Photo by Masashi Wakui-->
+        </div>
+        <!-- landing text -->
+        <div class="landingText">
+            <h1 class="lh1">Alex Mougios</h1>
+            <h3 class="lh3">Graduating IT student, Aspiring Software Developer</h3>
+        </div>
+
+
+        <!-- The social media icon bar -->
+        <div class="icon-bar">
+            <a href="https://www.instagram.com/mougiman1/?hl=en" class="instagram"><i class="fa fa-instagram"></i></a> 
+            <a href="https://twitter.com/AlexMougios" class="twitter"><i class="fa fa-twitter"></i></a> 
+            <a href="https://github.com/mougiman" class="github"><i class="fa fa-github"></i></a> 
+            <a href="https://www.linkedin.com/in/alex-mougios-5143a913a/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCebr2VTRPcE_hYr-Ewy097g?view_as=subscriber" class="youtube"><i class="fa fa-youtube"></i></a> 
+        </div>
+
+        <!--About Me-->
+        <div class="second">
+            <div class="third">
+                <h2 class="lh2">About Me</h2>
+                <p class="lp"><b class="speechmarks">"</b>I am a graduating student from the University of Technology Sydney and have a passion for Information Technologies.  I have always had an interest in IT and chose to study a Bachelor of Science in Information technology, majoring in Enterprise Software Development. During my time studying I have worked on many projects alone and within teams, and have even taken to learning some development skills on my own.  My current goals include learning more about software development and gaining industry experience. <b class="speechmarks">"</b></p>
+            </div>
+            <div class="sixth">
+                <h2 class="lh2">Technical Skills:</h2>  
+                <div>
+
+                    <div class="skillBox">
+                        <h5 class="lh5">Web Development Skills</h5>
+                        <ul>
+                            <li><p>Java, HTML, CSS, PHP, Javascript, XML, SQL, NoSQL<p></li>
+                        </ul>
+                    </div>
+                    <div class="skillBox">
+                        <h5 class="lh5">Application Development Skills</h5>
+                        <ul>
+                            <li><p>Java, Swift, C, C++, Git </p></li>
+                        </ul>
+                    </div>
+                    <div class="skillBox">
+                        <h5 class="lh5">Cloud Computing Skills</h5>
+                        <ul>
+                            <li><p>Familiarity with AWS</p></li>
+                            <li><p>Some experience with Cisco networking Servers</p></li>
+                            <li><p>Competent with Unix commands</p></li>
+                        </ul>
+                    </div>
+                    <div class="skillBox">
+                        <h5 class="lh5">Other</h5>
+                        <ul>
+                            <li><p>Microsoft Office Suite, Google Suite</p></li>
+                            <li><p>Adobe Creative Suite (Adobe PhotoShop, Adobe Illustrator)</p></li>
+                            <li><p>Salesforce CRM, Firebase, MongoDB, Papertrail, Slack, Heroku</p></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--Values -->
+        <div class="fourth">
+            <div class="fifth">
+                <h2 class="lh2">Values</h2>
+                <h5 class="lh5">Motivated to Learn, Grow and Succeed</h5>
+                <ul>
+                    <li><p class="lp">Self-Improvement to me, means having the motivation to want to be a better person and acting on it.  This means wanting to improve not just on technical knowledge or skills, but personal character as well. By gaining more experience and learning, I hope to become a better person.</p></li>
+                </ul>
+                <h5 class="lh5">Responsibility and Dependability</h5>
+                <ul>
+                    <li><p class="lp">I believe that people are responsible for their own actions, mistakes and successes. That is why I hope to become a dependable person that is capable of helping people and being seen as reliable.</p></li>                   
+                </ul>
+                <h5 class="lh5">Warmth and Competence</h5>
+                <ul>
+                    <li><p class="lp">In business and in life, I believe that the two most important to characteristics to demonstrate to others are warmth and competence.  This means being giving, humble and respectful when dealing with others, but also demonstrating confidence and reliability when completing work.</p></li>                   
+                </ul>
+            </div>
+
+
+            <div class="fifth buffer">
+                <p class="lp">A PDF of my Resume containing my contact information, is available to download below</p>
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <form method="get" action="WEB-INF/Alexander Mougios - Resume.pdf">
+                    <button class="btn"><i class="fa fa-download"></i> Download</button>
+                </form>
+            </div>
+        </div>
+
+        <script src=”https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
