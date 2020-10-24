@@ -2,17 +2,7 @@
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
-and open the template in the editor.
-
-                    "use strict";
-                    if (document.body.scrollTop >= 200) {
-                        myNav.classList.add("nav-colored");
-                        myNav.classList.remove("nav-transparent");
-                    } else {
-                        myNav.classList.add("nav-transparent");
-                        myNav.classList.remove("nav-colored");
-                    }
-                    
+and open the template in the editor.                    
 -->
 <html>
     <head>
@@ -24,6 +14,8 @@ and open the template in the editor.
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
         <style>
         </style>
+         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        
         <script>
             function startTime() {
                 var today = new Date();
@@ -91,11 +83,11 @@ and open the template in the editor.
 
         <!--About Me-->
         <div class="second">
-            <div class="third">
+            <div class="third" data-aos="fade-down">
                 <h2 class="lh2">About Me</h2>
                 <p class="lp"><b class="speechmarks">"</b>I am a graduating student from the University of Technology Sydney and have a passion for Information Technologies.  I have always had an interest in IT and chose to study a Bachelor of Science in Information technology, majoring in Enterprise Software Development. During my time studying I have worked on many projects alone and within teams, and have even taken to learning some development skills on my own.  My current goals include learning more about software development and gaining industry experience. <b class="speechmarks">"</b></p>
             </div>
-            <div class="sixth">
+            <div class="sixth" data-aos="fade-down">
                 <h2 class="lh2">Technical Skills:</h2>  
                 <div>
 
@@ -133,7 +125,7 @@ and open the template in the editor.
         </div>
         <!--Values -->
         <div class="fourth">
-            <div class="fifth">
+            <div class="fifth"  data-aos="fade-down">
                 <h2 class="lh2">Values</h2>
                 <h5 class="lh5">Motivated to Learn, Grow and Succeed</h5>
                 <ul>
@@ -154,7 +146,7 @@ and open the template in the editor.
                 <p class="lp">A PDF of my Resume containing my contact information, is available to download below</p>
 
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                <form method="get" action="WEB-INF/Alexander Mougios - Resume.pdf">
+                <form method="get" action="WEB-INF/Alex Mougios - Resume.pdf">
                     <button class="btn"><i class="fa fa-download"></i> Download</button>
                 </form>
             </div>
@@ -162,5 +154,8 @@ and open the template in the editor.
 
         <script src=”https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="script.js"></script>
+        <script>
+           AOS.init();
+        </script>
     </body>
 </html>
