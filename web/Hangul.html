@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+start button
+timer
+list of questions and corresponding answers
+input box
+enter button
+score count
+-->
+<html>
+    <head>
+        <title>Hangul Tester</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>         
+        <script>
+            var timer = 5;
+            var ques = 0;
+            var ans = "";
+            var score = 0;
+            var hangul = ["ㄱ", "k", "ㄴ", "n"];
+
+            function start() {
+                clearTimeout(x);
+                timer = 10;
+                var x = setInterval(function () {
+                    var timerH1 = document.getElementById("timerH1");
+                    timerH1.innerHTML = timer;
+                    timer--;
+                    if (timer == -1) {
+                        clearInterval(x);
+                        alert("You scored " + score);
+                    }
+                }, 1000);
+            }
+
+            function checkAns() {
+                ans = document.getElementById("inputAns").value;
+                if (ans == hangul[ques + 1]) {
+                    document.body.style.backgroundColor = "green";
+                    scoreUp();
+                    newAns();
+                } else {
+                    document.body.style.backgroundColor = "red";
+                    newAns();
+                }
+            }
+
+            function newAns() {
+                ques = Math.floor(Math.random() * (hangul.length/2)) * 2 ;
+                document.getElementById("hangulCha").innerHTML = ques;
+            }
+
+            function scoreUp() {
+                score++;
+                document.getElementById("score").innerHTML = score;
+            }
+
+
+        </script>
+        <div>
+            <button onclick="start(), newAns()">Start</button>
+            <h1 id="timerH1">60</h1>
+            <h2 id="score">0</h2>
+            <h3 id="hangulCha" style="font-family: 'Noto Sans KR', sans-serif;"></h3>
+            <input id="inputAns">
+            <button onclick="checkAns()">Submit</button>
+
+        </div>
+    </body>
+</html>
