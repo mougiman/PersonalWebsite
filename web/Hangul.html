@@ -20,42 +20,90 @@ score count
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>         
+        <div style="padding: 20px; background-color:#202020; color: white; width: 40%; height: 40%; margin: auto">
+            <button id="startBtn" onclick="start(), newQues()">Start</button>
+            <button onclick="stop()">Stop</button>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="120" value="60" class="slider" id="myRange">
+            </div>
+            <h1 id="timerH1">60</h1>
+            <h2 id="score">0</h2>
+            <h3 id="hangulCha" style="font-family: 'Noto Sans KR', sans-serif;"></h3>
+            <input id="myInput" value="">
+            <button id="myBtn" onclick="checkAns()">Submit</button>
+        </div>
+        <div style="margin: auto; width: 40%">
+            <label>cheatsheet: </label>
+            <input type="checkbox" id="myCheck" onclick="cheat()">
+
+            <img src="images/hangulCheatsheet.jpg" id="cheatSheet" style="display: none">
+        </div>
+
         <script>
-            var timer = 5;
+            var timer = 60;
             var ques = 0;
             var ans = "";
             var score = 0;
-            var hangul = ["ㄱ", "k", "ㄴ", "n", "ㄷ", "d"];
+            var hangul = ["ㄱ", "k", "ㄴ", "n", "ㄷ", "d", "ㄹ", "rl", "ㅁ", "m", "ㅂ", "b", ];
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("timerH1");
+            var x;
 
             function start() {
-                clearTimeout(x);
-                timer = 10;
-                var x = setInterval(function () {
-                    var timerH1 = document.getElementById("timerH1");
-                    timerH1.innerHTML = timer;
-                    timer--;
-                    if (timer == -1) {
-                        clearInterval(x);
-                        alert("You scored " + score);
-                    }
-                }, 1000);
+                timer = slider.value;
+                x = setInterval(timerFunc, 1000);
+                document.getElementById("startBtn").disabled = true;
+                slider.disabled = true;
             }
 
-            function checkAns() {
-                ans = document.getElementById("inputAns").value;
-                if (ans == hangul[ques + 1]) {
-                    document.body.style.backgroundColor = "green";
-                    scoreUp();
-                    newAns();
-                } else {
-                    document.body.style.backgroundColor = "red";
-                    newAns();
+            function stop() {
+                clearInterval(x);
+                document.getElementById("startBtn").disabled = false;
+                slider.disabled = false;
+                timerH1.innerHTML = slider.value;
+                score = 0;
+                document.getElementById("score").innerHTML = score;
+            }
+
+            function timerFunc() {
+                var timerH1 = document.getElementById("timerH1");
+                timerH1.innerHTML = timer;
+                timer--;
+                if (timer == -1) {
+                    clearInterval(x);
+                    alert("You scored " + score);
                 }
             }
 
-            function newAns() {
-                ques = Math.floor(Math.random() * (hangul.length/2)) * 2 ;
-                document.getElementById("hangulCha").innerHTML = ques;
+            slider.oninput = function () {
+                output.innerHTML = this.value;
+            }
+
+            function cheat() {
+                var checkBox = document.getElementById("myCheck");
+                if (checkBox.checked == false) {
+                    document.getElementById("cheatSheet").style.display = "none";
+                } else {
+                    document.getElementById("cheatSheet").style.display = "block";
+                }
+            }
+
+            function checkAns() {
+                ans = document.getElementById("myInput").value;
+                if (ans == hangul[ques + 1]) {
+                    document.body.style.backgroundColor = "green";
+                    scoreUp();
+                    newQues();
+                } else {
+                    document.body.style.backgroundColor = "red";
+                    newQues();
+                }
+            }
+
+            function newQues() {
+                ques = Math.floor(Math.random() * (hangul.length / 2)) * 2;
+                document.getElementById("hangulCha").innerHTML = hangul[ques];
+                document.getElementById("myInput").value = "";
             }
 
             function scoreUp() {
@@ -63,16 +111,14 @@ score count
                 document.getElementById("score").innerHTML = score;
             }
 
+            var input = document.getElementById("myInput");
+            input.addEventListener("keyup", function (event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("myBtn").click();
+                }
+            });
 
         </script>
-        <div>
-            <button onclick="start(), newAns()">Start</button>
-            <h1 id="timerH1">60</h1>
-            <h2 id="score">0</h2>
-            <h3 id="hangulCha" style="font-family: 'Noto Sans KR', sans-serif;"></h3>
-            <input id="inputAns">
-            <button onclick="checkAns()">Submit</button>
-
-        </div>
     </body>
 </html>
