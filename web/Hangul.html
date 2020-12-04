@@ -20,7 +20,7 @@ score count
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>         
-        <div style="padding: 20px; background-color:#202020; color: white; width: 40%; height: 40%; margin: auto">
+        <div style="padding: 20px; background-color:#202020; color: white; width: 40%; height: 40%; margin: auto; text-align: center">
             <button id="startBtn" onclick="start(), newQues()">Start</button>
             <button onclick="stop()">Stop</button>
             <div class="slidecontainer">
@@ -28,7 +28,7 @@ score count
             </div>
             <h1 id="timerH1">60</h1>
             <h2 id="score">0</h2>
-            <h3 id="hangulCha" style="font-family: 'Noto Sans KR', sans-serif;"></h3>
+            <h3 id="hangulCha" style="font-family: 'Noto Sans KR', sans-serif; font-size: 72px;"></h3>
             <input id="myInput" value="">
             <button id="myBtn" onclick="checkAns()">Submit</button>
         </div>
@@ -44,7 +44,7 @@ score count
             var ques = 0;
             var ans = "";
             var score = 0;
-            var hangul = ["ㄱ", "k", "ㄴ", "n", "ㄷ", "d", "ㄹ", "rl", "ㅁ", "m", "ㅂ", "b", "ㅅ", "s", "ㅇ", "ng", "ㅈ", "j", "ㅊ", "ch", "ㅋ", "k", "ㅌ", "t", "ㅍ", "p", "ㅎ", "h", "ㄲ", "kk", "ㄸ", "dd", "ㅃ", "bb", "ㅆ", "ss", "ㅉ", "jj", "ㅏ", "a", "ㅐ", "ae", "ㅑ", "ya", "ㅓ", "o", "ㅔ", "e", "ㅕ", "yo", "ㅗ", "o", "ㅛ", "yo", "ㅜ", "u"];
+            var hangul = ["ㄱ", "k", "ㄴ", "n", "ㄷ", "d", "ㄹ", "rl", "ㅁ", "m", "ㅂ", "b", "ㅅ", "s", "ㅇ", "ng", "ㅈ", "j", "ㅊ", "ch", "ㅋ", "k", "ㅌ", "t", "ㅍ", "p", "ㅎ", "h", "ㄲ", "kk", "ㄸ", "dd", "ㅃ", "bb", "ㅆ", "ss", "ㅉ", "jj", "ㅏ", "a", "ㅐ", "ae", "ㅑ", "ya", "ㅓ", "o", "ㅔ", "e", "ㅕ", "yo", "ㅗ", "o", "ㅛ", "yo", "ㅜ", "u", "ㅠ", "yu", "ㅡ", "eu", "ㅣ", "i"];
             var slider = document.getElementById("myRange");
             var output = document.getElementById("timerH1");
             var x;
@@ -72,6 +72,7 @@ score count
                 if (timer == -1) {
                     clearInterval(x);
                     alert("You scored " + score);
+                    stop();
                 }
             }
 
