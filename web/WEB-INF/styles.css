@@ -325,4 +325,52 @@ tr{
     background-color: RoyalBlue;
 }
 
+/*Media Query for smartphone*/
+@media screen and (max-width: 600px){
+    .navA{
+        font-size: 20px;
+        padding: 5px;   
+    }
 
+    .clock{
+        font-size: 15px;
+    }
+
+    .skillBox{
+        max-width: 100%;
+        font-size: 15px;
+        padding: 3px;
+        display: block;
+    }
+
+    ul{
+
+    }
+
+    .third{
+        padding-top: 40px;
+    }
+
+    .uts{
+        visibility: hidden;
+        height: 0px;
+    }
+
+    .cyptoImgs{
+        visibility: hidden;
+        height: 0px;
+    }
+    
+    .second a{
+        color: lightgrey;
+    }
+    
+    table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+        
+        u{
+            font-size: 20px;
+        }
+    
+}
